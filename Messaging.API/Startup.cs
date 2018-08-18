@@ -82,6 +82,8 @@ namespace Messaging.API
 
             loggerFactory.AddProvider(new FileLogProvider(env));
 
+            DbInitializer.Initialize(app);
+
             app.UseMvc();
         }
     }
